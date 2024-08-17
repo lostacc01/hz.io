@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notz Stereo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Barra lateral -->
+        <aside id="sidebar">
+            <div id="logo-banner">
+                <img src="imagenes/0e68665a9b9e8a8006f9555c4ed7a110.png" alt="Logo Notz Stereo">
+            </div>
+            <div id="logo">
+                <h1>Notz Stereo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" data-target="main-header" class="nav-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#" data-target="playlists" class="nav-link"><i class="fas fa-list"></i> Playlists</a></li>
+                    <li><a href="#" data-target="add-to-public-playlist" class="nav-link"><i class="fas fa-plus"></i> Añadir</a></li>
+                    <li><a href="#" data-target="donaciones" class="nav-link"><i class="fas fa-donate"></i> Donaciones</a></li>
+                    <li><a href="#" data-target="creditos" class="nav-link"><i class="fas fa-users"></i> Créditos</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido principal -->
+        <section id="main-content">
+            <section id="main-header" class="section">
+                <button class="close-button" onclick="hideMainContent()">✖</button>
+                <h1>Vive al ritmo 🎶</h1>
+                <p>¡Bienvenido a Notz Stereo!</p>
+                <p>Gracias por unirte a nuestra comunidad musical. Notz Stereo está en su fase beta y estamos emocionados de ofrecerte una experiencia innovadora en la reproducción de música. Queremos que disfrutes de tu música favorita de la manera más fluida y personalizable posible.</p>
+                <p>Esperamos que disfrutes de cada ritmo y melodía, y agradecemos tu apoyo mientras continuamos mejorando y ampliando nuestras características. Si tienes alguna sugerencia o comentario, no dudes en ponerte en contacto con nosotros. ¡Disfruta de la música!</p>
+            </section>
+
+            <!-- Sección de Playlists -->
+            <section id="playlists" class="section hidden">
+                <h3>Playlists Actuales en </h3>
+                <div id="playlist-gallery">
+                    <!-- Playlist 1 -->
+                    <div class="playlist" id="playlist-1">
+                        <h4>Playlist 1</h4>
+                        <div class="playlist-items">
+                            <div class="playlist-item" data-audio-src="https://stream-176.zeno.fm/m1njpvvbf6ouv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJtMW5qcHZ2YmY2b3V2IiwiaG9zdCI6InN0cmVhbS0xNzYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjR5cnFNbHJfUk9hVTVEU1FuYUQxa1EiLCJpYXQiOjE3MjM4Mzk0OTAsImV4cCI6MTcyMzgzOTU1MH0.bq-ra03hPLXQwEiqsnN2NfRgRDrKbJLj28QUGNtKhdg" data-track-name="Canción 1">
+                                <img src="imagenes/Brazil.jpg" alt="Álbum 1">
+                                <p>Mundo Brazil 🇧🇷</p>
+                                <b>Creada por: xGHOST</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Playlist 2 -->
+                    <div class="playlist" id="playlist-2">
+                        <h4>Playlist 2</h4>
+                        <div class="playlist-items">
+                            <div class="playlist-item" data-audio-src="" data-track-name="Canción 2">
+                                <img src="imagenes/Radeon_Radio.png" alt="Álbum 2">
+                                <p>Radeon 103.3 FM</p>
+                                <b>Creada por: Radeon</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Playlist 4 -->
+                    <div class="playlist" id="playlist-4">
+                        <h4>Playlist 4</h4>
+                        <div class="playlist-items">
+                            <div class="playlist-item" data-audio-src="" data-track-name="Canción 3">
+                                <img src="imagenes/MusicaBailable.jpg" alt="Álbum 4">
+                                <p>Musica Bailable</p>
+                                <b>Creada por: Jahdi</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Playlist 5 -->
+                    <div class="playlist" id="playlist-5">
+                        <h4>Playlist 5</h4>
+                        <div class="playlist-items">
+                            <div class="playlist-item" data-audio-src="" data-track-name="Canción 4">                       
+                                <img src="imagenes/pngtree-spartan-sports-logo-png-image_15290679.png" alt="Álbum 5">
+                                <p>Spartan RK</p>
+                                <b>Creada por: Royl</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección para añadir a la playlist pública -->
+            <section id="add-to-public-playlist" class="section hidden">
+                <h3>📤 | Añadir a la Playlist Pública</h3>
+                <p>Para añadir canciones a la playlist pública, por favor contacta con el desarrollador de la aplicación. Debes proporcionar un listado detallado de las canciones que deseas añadir. El desarrollador se encargará de revisar y añadir las canciones a la playlist.</p>
+                <p>Actualmente, la función para añadir canciones directamente no está disponible para los usuarios. Agradecemos tu comprensión y colaboración.</p>
+                <h3>👀 | Atención</h3>
+                <strong>Si deseas añadir canciones, contacta al Discord @ghostgg_</strong>
+            </section>
+
+           <!-- Sección de Donaciones -->
+<section id="donaciones" class="section hidden">
+    <h3>Donaciones</h3>
+    <p>Si te gusta nuestra aplicación y quieres apoyarnos, puedes hacer una donación. Apreciamos tu ayuda para seguir mejorando.</p>
+    <p>Enlace para donaciones: <a id="donation-link" href="https://paypal.me/ghostggoff?country.x=CO&locale.x=es_XC" target="_blank">Hacer una donación</a></p>
+    <div class="donation-buttons">
+        <button id="donate-button" class="donation-btn">Dóname 💖</button>
+        <button id="copy-link-button" class="donation-btn">Copiar Enlace 📋</button>
+    </div>
+</section>
+
+
+           <!-- Sección de Créditos -->
+<section id="creditos" class="section hidden">
+    <h3>Créditos</h3>
+    <p>Agradecemos a todos los que han contribuido al desarrollo de esta aplicación:</p>
+    <ul>
+        <li>🛠️ Desarrollador: <strong>xGHOST</strong></li>
+        <li>🎨 Diseñador Gráfico: <strong>xGHOST</strong></li>
+        <li>🧑‍💻 Beta Testers: <strong>Miembros del Staff de Horizon Studios</strong></li>
+    </ul>
+</section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

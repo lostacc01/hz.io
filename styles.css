@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#app-container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #1f1f1f;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo banner styling */
+#logo-banner {
+    text-align: center; /* Center the logo banner */
+    margin-bottom: 20px;
+}
+
+#logo-banner img {
+    width: 80%; /* Adjust width to your preference */
+    max-width: 400px; /* Ensure the logo does not become too large */
+    height: auto;
+    display: block; /* Ensure the image is centered */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Logo and title styling */
+#logo {
+    text-align: center; /* Center the logo text */
+    margin-bottom: 20px;
+}
+
+#logo h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center; /* Center text within the logo container */
+    font-family: 'Arial', sans-serif; /* Elegant font choice */
+    font-weight: bold; /* Make the title stand out */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+
+#main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#playlist-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.playlist {
+    width: 200px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playlist h4 {
+    margin: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.playlist-item {
+    cursor: pointer;
+}
+
+.playlist-item img {
+    width: 100%;
+    height: auto;
+}
+
+.playlist-item p {
+    margin: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1f1f1f;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#audio {
+    width: 100%;
+}
+/* Estilo general para el contenido principal */
+#main-content {
+    position: relative; /* Permite posicionar elementos dentro del contenedor */
+    padding: 20px; /* Espaciado interno para el contenido */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estilo para el encabezado principal */
+#main-header {
+    position: relative; /* Posiciona el encabezado dentro del contenedor principal */
+    z-index: 2; /* Asegura que el texto esté por encima del fondo */
+    background: hwb(0 0% 100% / 0.234); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Imagen de fondo con desenfoque y opacidad */
+#main-content::before {
+    content: ""; /* Necesario para el pseudo-elemento */
+    position: absolute; /* Posiciona la imagen de fondo en el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('imagenes/banner.jpg') no-repeat center center; /* Cambia la ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    filter: blur(8px); /* Aplica desenfoque */
+    opacity: 0.5; /* Ajusta la opacidad */
+    z-index: 1; /* Coloca la imagen detrás del texto */
+    /* También puede ser útil aplicar un color de fondo sólido con opacidad */
+    background-color: rgba(0 0% 100% / 0.234); /* Agrega un color sólido para un desenfoque más visible */
+}
+
+/* Asegura que el contenido se muestre por encima del fondo desenfocado */
+#main-content > * {
+    position: relative;
+    z-index: 2;
+}
+/* Estilos para la sección de donaciones */
+#donaciones {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#donaciones h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#donaciones p {
+    color: #666;
+    margin: 10px 0;
+}
+
+#donation-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#donation-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los botones de donación */
+.donation-buttons {
+    margin-top: 20px;
+}
+
+.donation-btn {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.donation-btn:hover {
+    background-color: #0056b3; /* Color de fondo en hover */
+}
+
+.donation-btn:focus {
+    outline: none;
+}
+
+/* Estilos para la sección de Créditos */
+#creditos {
+    padding: 20px;
+    background-color: #18191b; /* Color de fondo suave */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#creditos h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+#creditos p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#creditos ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding-left: 0; /* Elimina el padding izquierdo de la lista */
+}
+
+#creditos li {
+    font-size: 16px;
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+#creditos strong {
+    font-weight: bold;
+}
